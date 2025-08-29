@@ -32,7 +32,7 @@ requirements:
     - pyproj
     - pystac-client
     - rasterio
-    - zarr>=3
+    - zarr >=3
     - xarray
     - rioxarray
     - pandas
@@ -41,7 +41,7 @@ requirements:
     - earthaccess
     - hyp3_sdk
     - tqdm
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
