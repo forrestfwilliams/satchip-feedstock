@@ -1,6 +1,6 @@
 {% set name = "satchip" %}
-{% set version = "0.1.0" %}
-{% set python_min = "3.10" %}
+{% set version = "0.2.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/satchip-{{ version }}.tar.gz
-  sha256: 37d78953baeade7ea1c6be42a4df5cb3918e39038ca4f0f434afe3d6d58bf377
+  sha256: de4ee5507f233a98b341c9b96020b4ece4f4e93f34faf8244fa82967c8e64861
 
 build:
   entry_points:
@@ -32,14 +32,16 @@ requirements:
     - pyproj
     - pystac-client
     - rasterio
-    - zarr
+    - zarr>=3
     - xarray
     - rioxarray
     - pandas
     - geopandas
     - asf_search
+    - earthaccess
     - hyp3_sdk
     - tqdm
+    - matplotlib
 
 test:
   imports:
@@ -48,6 +50,7 @@ test:
     - pip check
     - chiplabel --help
     - chipdata --help
+    - chipview --help
   requires:
     - python {{ python_min }}
     - pip
