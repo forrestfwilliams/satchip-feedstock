@@ -1,5 +1,5 @@
 {% set name = "satchip" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,12 +8,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/satchip-{{ version }}.tar.gz
-  sha256: de4ee5507f233a98b341c9b96020b4ece4f4e93f34faf8244fa82967c8e64861
+  sha256: 3d60ddfe50d5cf8ec993642e3fbf4ff76c9034729b220971568fa4024107b0a9
 
 build:
   entry_points:
     - chiplabel = satchip.chip_label:main
     - chipdata = satchip.chip_data:main
+    - chipview = satchip.chip_view:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
