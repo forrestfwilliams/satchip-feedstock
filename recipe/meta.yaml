@@ -1,5 +1,5 @@
 {% set name = "satchip" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/satchip-{{ version }}.tar.gz
-  sha256: bb0d9c541832ef07130aab8b0fe8211e51fb57d6a8ef8c85caccddc9a28fcaf7
+  sha256: acf4b4a8908bb4514bf079a0ad3a291f21425513f1bbd9ed1901af6f557b68f5
 
 build:
   entry_points:
@@ -64,4 +64,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - williamh890
+    - jacquelynsmale
+    - asjohnston-asf
     - forrestfwilliams
